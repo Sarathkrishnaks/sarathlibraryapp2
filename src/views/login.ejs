@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="/css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img src="https://previews.123rf.com/images/sergeypykhonin/sergeypykhonin1809/sergeypykhonin180900041/108230283-registration-register-logo-or-label-diary-note-icon-vector-illustration.jpg" width="60px"  height="50px" style="padding-top: 1em;margin-bottom: 1em;">
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+          <%for(i=3;i<nav.length;i++){%>
+        <li>
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+        <%}%>
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+          <ul class="dropdown-menu" style="padding:12px;">
+            <form class="form-inline">
+              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+            </form>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br><br><br><br><div class="col-lg-5"></div>
+        <div class="col-lg-2">
+        <h2>Log in
+          <p class="lead"></p>
+        </h2></div>
+      </div>
+      <div class="col-md-0">
+        <div class="well well-sm"> 
+          <div class="row">
+            <div class="col-sm-12">
+                </div>
+          </div>
+        </div>
+      </div>
+    </div> <div class="col-lg-5"></div>
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+          
+          
+          
+          <!--/stories-->
+            
+          <!-- sign in form starts here -->
+  <br>
+  
+  <div class="row" id="myMargin">
+  
+    <form  action="/" onsubmit=" return validate()  && password()">
+  </div><div class="col-lg-4"></div>
+  <div class="col-lg-4">
+    <p>If you have an Account Sign in using your id and password. <br>
+    For creating a new Account Click here<a href="/signup"> Sign up</a> </p>
+    <br>
+    <form  >
+      <div class="form-group">
+        <label for="err" id="err"> Enter Email Address</label>
+        <input type="email" required class="form-control" id="mail" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="pw" id="pw">Enter Password  </label>
+        <input type="password" required class="form-control" id="pawd">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Log in</button>
+    </form></div>
+    <div class="col-lg-4"></div>
+    
+      <!-- sign in form ends here -->
+            
+
+
+          
+          <!--/stories-->
+          
+          
+          
+        
+          
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+      </div>
+    </div>
+  </div>
+</footer>
+  <!-- script references -->
+  <script>let mail = document.getElementById("mail");
+    let err =  document.getElementById("err");
+    
+     function validate()
+        {
+        let regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+        if(regexp.test(mail.value))
+        {
+            err.innerHTML = "Valid email";
+            err.style.color ="green";
+            mail.style.border ="2px solid green";
+            return true;
+        }
+         
+         else
+       
+       {
+       err.innerHTML = "Invalid email";
+            err.style.color ="red";
+            mail.style.border ="2px solid Red";
+            return false;
+    }
+   }
+   
+   let pawd=document.getElementById("pawd");
+   let pw= document.getElementById("pw");
+   function password()
+   {
+       let pass= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/
+       if(pass.test(pawd.value))
+       {
+         pw.innerHTML=" Valid Password ";
+         alert('WELCOME TO LIBRARY APP & WISHING YOU  HAPPY LEARNING');
+         pw.style.color="green";
+         pawd.style.border ="2px solid green";
+         return true;  
+       }
+       else
+       {
+           pw.innerHTML="Invalid Password";
+           pw.style.color="red";
+           pawd.style.border ="2px solid red";
+           return false;
+       }
+   }
+   
+   
+   
+   </script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

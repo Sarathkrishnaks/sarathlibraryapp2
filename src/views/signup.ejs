@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="/css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img src="https://previews.123rf.com/images/sergeypykhonin/sergeypykhonin1809/sergeypykhonin180900041/108230283-registration-register-logo-or-label-diary-note-icon-vector-illustration.jpg" width="60px"  height="50px" style="padding-top: 1em;margin-bottom: 1em;">
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+          <%for(i=3;i<nav.length;i++){%>
+        <li>
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+        <%}%>
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+          <ul class="dropdown-menu" style="padding:12px;">
+            <form class="form-inline">
+              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+            </form>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br><br><br><br><div class="col-lg-5"></div>
+        <div class="col-lg-2">
+        <h2>Sign up
+          <p class="lead"></p>
+        </h2></div>
+      </div>
+      <div class="col-md-0">
+        <div class="well well-sm"> 
+          <div class="row">
+            <div class="col-sm-12">
+                </div>
+          </div>
+        </div>
+      </div>
+    </div> <div class="col-lg-5"></div>
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+          
+          
+          
+          <!--/stories-->
+            
+          
+            <!-- sign up form starts here -->
+  <div class="row" id="myMargin">
+    <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+    <p>Create a New Account, if you are here for the first time.<br>
+      If you already have an Account,Please Click here<a href="/login"> Log in</a>
+     </p>
+     <form action="/login" onsubmit="return phoneno() && validate() && password() &&  checkpassword() && check() ">
+     <div class="form-group">
+     <label for="nam" id="nam"> User name</label>
+        <input type="text" required class="form-control" id="name" aria-describedby="emailHelp">
+      </div>
+  
+        <div class="form-group">
+        <label  for="phone" id="phone">Enter your phone number</label>
+        <input type="text" required class="form-control" id="pno" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="error" id="error"> Enter Email </label>
+        <input type="email" required class="form-control"  aria-describedby="emailHelp" placeholder="enter email" 
+        id="email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      
+      <div class="form-group">
+        <label for="pword" id="pword">Enter Password</label>
+        <input type="password" required class="form-control"  placeholder="enter password" id="pwd" ><br>
+        <progress max="100" value="0" id="strength"   style="width: 400px;"></progress>
+      </div>
+      <div class="form-group">
+          <label for="pword1" id="pword1"> Confirm Password</label>
+          <input type="password" required class="form-control"  placeholder="confirm your password" id="word" >
+        </div>
+      <div class="form-group form-check">
+        <input type="checkbox"  required class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label"  for="exampleCheck1">Remember my ID & Password</label>
+      </div>
+      <button type="submit" class="btn btn-primary" id="submit" >Sign Up</button>
+      </form> </div></div>
+      <div class="col-lg-4"></div>
+
+      <!-- sign up form ends here -->
+       <!--/stories-->
+          </div>
+      </div>
+      </div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+      </div>
+    </div>
+  </div>
+</footer>
+  <!-- script references -->
+  
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      let pno=document.getElementById("pno");
+let phone= document.getElementById("phone");
+function phoneno()
+{
+  let  reg=/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
+  if(reg.test(pno.value))
+  {
+      phone.innerHTML="Valid Phone Number";
+      phone.style.color="green";
+      pno.style.border ="2px solid green";
+      return true;  
+  }
+  else
+  {
+    phone.innerHTML="Invalid Phone Number";
+    phone.style.color="red";
+    pno.style.border ="2px solid red";
+    alert('should contain 10 numbers only,xxx-xxx-xxxx,xxx.xxx.xxxx,xxx xxx xxxx are only allowed');
+    return false;  
+  }
+}
+
+ let email = document.getElementById("email");
+ let error =  document.getElementById("error");
+ 
+  function validate()
+     {
+     let regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+     if(regexp.test(email.value))
+     {
+         error.innerHTML = "Valid email";
+         error.style.color ="green";
+         email.style.border ="2px solid green";
+         return true;
+     }
+      
+      else
+    
+    {
+    error.innerHTML = "Invalid email";
+         error.style.color ="red";
+         email.style.border ="2px solid Red";
+         return false;
+ }
+}
+
+let pwd=document.getElementById("pwd");
+let pword= document.getElementById("pword");
+ function password()
+{
+    let  pass= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/
+    if(pass.test(pwd.value))
+    {
+      pword.innerHTML=" Valid Password ";
+      pword.style.color="green";
+      pwd.style.border ="2px solid green";
+      return true;  
+    }
+    else
+    {
+        pword.innerHTML="Invalid Password,should contain 1 uppercase,1 lowercase, 1 number values";
+        pword.style.color="red";
+        pwd.style.border ="2px solid red";
+        return false;
+    }
+}
+console.log("work");
+var pass=document.getElementById("pwd");
+
+pass.addEventListener('keyup',function(){
+  checkPassword(pass.value)
+})
+function checkPassword(password){
+  var strengthBar = document.getElementById("strength")
+  var strength =0;
+  if(password.match(/[a-zA-Z0-9][a-zA-Z0-9]+/)){
+    strength += 1
+  }
+  if(password.match(/[~<>?]+/)){
+    strength+= 1
+  }
+  if(password.match(/[!@$%^&*()]+/)){
+    strength +=1
+  }
+  if(password.length>5){
+    strength += 1
+  }
+  
+  switch(strength){
+      case 0:
+      strengthBar.value= 0;
+      break;
+      case 1:
+      strengthBar.value= 25;
+      break;
+      case 2:
+      strengthBar.value= 50;
+      break;
+      case 3:
+      strengthBar.value= 75;
+      break;
+      case 4:
+      strengthBar.value= 100;
+      break;
+      
+  }}
+
+
+
+
+var word=document.getElementById("word");
+var pword1=document.getElementById("pword1");
+
+function check(){
+  if(document.getElementById("pwd").value==document.getElementById("word").value)
+  {
+    pword1.innerHTML="Password Confirmed";
+    pword1.style.color="green";
+    word.style.border="2px solid green";
+    alert("Account Created Successfully");
+    return true;
+  }
+  else
+  {
+    pword1.innerHTML="Confirm  Password again";
+    pword1.style.color="red";
+    word.style.border="2px solid red";
+    return false;
+  }
+}
+
+      
+  
+  
+  
+     
+
+
+
+
+    
+    </script>
+	</body>
+</html>
