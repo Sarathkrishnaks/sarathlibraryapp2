@@ -88,30 +88,28 @@
       <div class="panel">
         <div class="panel-body">
           
-          
-          
           <!--/stories-->
-          <form action="/" onsubmit="return validate() && valid()">
+          <form action="/admin/add"  method="POST" onsubmit="validate() && valid() && addbook()">
           <center><h2><b>Add a Book</b></h2></center>
             <div  class="col-lg-5">
           <div class="mb-3">
       
             <label for="book"  class="form-label" >Book Title</label>
-            <input type="text"  for="title"class="form-control" id="title" placeholder="Book Title">
+            <input type="text" name="title" for="title"class="form-control" id="title" placeholder="Book Title">
             <label for="book"  id="book"class="form-label"style="margin-left:1em;"></label>
           </div></div>
 
           <div  class="col-lg-5">
           <div class="mb-3">
-            <label for="auth" class="form-label">Author Name</label>
-            <input  for="author"type="text"  class="form-control" id="author" placeholder="Author Name">
+            <label for="auth"  class="form-label">Author Name</label>
+            <input  for="author" name="author" type="text"  class="form-control" id="author" placeholder="Author Name">
             <label for="auth"  id="auth"class="form-label"style="margin-left:1em;"></label>
           </div></div>
           <div  class="col-lg-2"></div>
           <div class="col-lg-5"><br><br>
           <div class="mb-3">
-            <label for="cov" class="form-label">Book Cover</label>
-            <input class="form-control" id="cover" type="file" id="formFile">
+            <label for="cov" class="form-label" >Book Cover</label>
+            <input class="form-control"  name="image" id="cover" type="file" id="formFile">
             <label for="cov"  id="cov"class="form-label" style="margin-left:1em;"></label>
 
 
@@ -235,7 +233,7 @@ function valid()
   let cov = document.getElementById("cov");
  let cover =  document.getElementById("cover");
  
-  function validate()
+  function addbook()
      {
      if((cover.value)=="")
      {
