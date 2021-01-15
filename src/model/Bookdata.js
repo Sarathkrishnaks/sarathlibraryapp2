@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 // Database connection
-mongoose.connect('mongodb://localhost:27017/library');
+mongoose.connect('mongodb+srv://sarath:sarath@fsdfiles.gomb9.mongodb.net/LIBRARYAPP?retryWrites=true&w=majority');
 const Schema = mongoose.Schema;
 
 // Schema definition
