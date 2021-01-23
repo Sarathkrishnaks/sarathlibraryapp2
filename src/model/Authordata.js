@@ -1,4 +1,3 @@
-
 // Accessing the mongoose package
 const mongoose = require('mongoose');
 
@@ -7,14 +6,14 @@ mongoose.connect('mongodb+srv://sarath:sarath@fsdfiles.gomb9.mongodb.net/LIBRARY
 const Schema = mongoose.Schema;
 
 // Schema definition
-const BookSchema = new Schema({
+const AuthorSchema = new Schema({
     title:String,
     genre:String,
-    author:String,
+    works:String,
     image:String 
 });
 
 // Model creation
- var Bookdata = mongoose.model('bookdata',BookSchema);
+ var Authordata = mongoose.model('authordata',AuthorSchema);
 
- module.exports = Bookdata;
+ module.exports = Authordata;

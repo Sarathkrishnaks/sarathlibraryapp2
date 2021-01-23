@@ -6,12 +6,12 @@
 		<title><%=title%></title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="/css/styles.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -52,7 +52,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Book
+        <h1>Delete Book
           <p class="lead"></p>
         </h1>
       </div>
@@ -88,43 +88,40 @@
       <div class="panel">
         <div class="panel-body">
           
-          
-          
           <!--/stories-->
-            
+          <form action="/delbooks/add"  method="POST" onsubmit="validate() && valid() && addbook()">
+          <center><h2><b>Delete a Book</b></h2></center>
+            <div  class="col-lg-5">
+          <div class="mb-3">
+      
+            <label for="book"  class="form-label" >Book Title</label>
+            <input type="text" name="title" for="title"class="form-control" id="title" placeholder="Book Title">
+            <label for="book"  id="book"class="form-label"style="margin-left:1em;"></label>
+          </div></div>
 
-          <div class="row">    
-            <br>
-            <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="/images/<%=book.image%>" style="width:100px;height:100px" class="img-circle"></a>
-            </div>
-            <div class="col-md-10 col-sm-9">
-              <h3><%=book.title%></h3>
-              <div class="row">
-                <div class="col-xs-9">
-                  <h4><span class="label label-default"><%=book.author%></span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted"><%=book.genre%> • 
-                   </small>
-                  </h4></div>
-                <div class="col-xs-3"></div>
-                <form action="/admin">
-                  <button type="submit" class="btn btn-primary" style="margin-left: 35em;margin-top:-.5em">Update</button>
-                </form>
-                <form action="/delbooks">
-                  <button type="submit" class="btn btn-primary" style="margin-left: 45em;margin-top:-3.9em">Delete</button>
-                  </form>
-              </div>
-              <br><br>
-            </div>
-          </div>
-          <hr>
-          
-          
+          <div  class="col-lg-5">
+          <div class="mb-3">
+            <label for="auth"  class="form-label">Author Name</label>
+            <input  for="author" name="author" type="text"  class="form-control" id="author" placeholder="Author Name">
+            <label for="auth"  id="auth"class="form-label"style="margin-left:1em;"></label>
+          </div></div>
+          <div  class="col-lg-2"></div>
+          <div class="col-lg-5"><br><br>
+          <div class="mb-3">
+            <label for="cov" class="form-label" >Book Cover</label>
+            <input class="form-control"  name="image" id="cover" type="file" id="formFile">
+            <label for="cov"  id="cov"class="form-label" style="margin-left:1em;"></label>
+
+
+          </div></div>
+        </div><div col-lg-5></div>
+        <div class="col-auto">
+          <div col-lg-2>
+            <button type="submit" class="btn btn-primary" style="margin-left: 37em;">Delete</button></div>
+            <br><br><br>
+          </div><div col-lg-5></div>
+        </form>
           <!--/stories-->
-          
-          
-          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
-        
           
         </div>
       </div>
@@ -177,6 +174,87 @@
 </footer>
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+
+
+
+let book = document.getElementById("book");
+ let title =  document.getElementById("title");
+ 
+  function validate()
+     {
+     if((title.value)=="")
+     {
+         book.innerHTML = " Book Title should not be empty";
+         book.style.color="red";
+         title.style.border ="2px solid Red";
+         return false;
+     }
+      
+      else
+    
+    {
+    
+        book.innerHTML = "Valid Book Name";
+         book.style.color ="green";
+         title.style.border ="2px solid green";
+         return true;
+
+ }
+}
+
+let auth = document.getElementById("auth");
+ let author =  document.getElementById("author");
+function valid()
+     {
+       let regexp=/^([A-Za-z\.]+)?$/
+       if(author.value==""){
+      auth.style.color="red";
+      auth.innerHTML = "Field is empty";
+      author.style.border = "2px solid red";
+      return false;
+    }
+    else if(regexp.test(author.value)){
+      auth.style.color="green";
+      auth.innerHTML = "Success";
+      author.style.border = "2px solid green";
+      return true;
+    }
+    else{
+      auth.style.color="red";
+      auth.innerHTML = "Alphabet are only allowed";
+      author.style.border = "2px solid red";
+      return false;
+    }
+    
+  }
+
+  let cov = document.getElementById("cov");
+ let cover =  document.getElementById("cover");
+ 
+  function addbook()
+     {
+     if((cover.value)=="")
+     {
+         cov.innerHTML = " Enter a Book cover  ";
+         cov.style.color="red";
+         cover.style.border ="2px solid Red";
+         return false;
+     }
+      
+      else
+    
+    {
+    
+        cov.innerHTML = " Book cover  Successfull";
+         cov.style.color ="green";
+         cover.style.border ="2px solid green";
+         return true;
+
+ }
+}
+
+  </script>
 	</body>
 </html>
